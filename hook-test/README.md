@@ -25,7 +25,13 @@ useRef ==> App4-1.tsx
 useRef + ForwardRef ==> App4-2.tsx
 useRef + ForwardRef + useImperativeHandle ==> App4-3.tsx
 
+## **useContext**
+
+useContext ==> App5.tsx
+
 ## **memo、useMemo、useCallback**
+
+memo、useMemo、useCallback ==> App6.tsx App6-1.tsx
 
 memo 是防止 props 没变时的重新渲染，useMemo 和 useCallback 是防止 props 的不必要变化。
 
@@ -38,6 +44,19 @@ memo + useCallback、useMemo 是搭配着来的，少了任何一方，都会使
 但 useMemo 和 useCallback 也不只是配合 memo 用的：
 
 比如有个值的计算，需要很大的计算量，你不想每次都算，这时候也可以用 useMemo 来缓存。
+
+## **useSyncExternalStore**
+
+useSyncExternalStore ==> App7.tsx
+
+## **useTransition**
+
+useDeferredValue ==> App8.tsx
+
+## **useDeferredValue**
+
+useDeferredValue ==> App9.tsx
+与防抖或节流不同，useDeferredValue 不需要选择任何固定延迟时间。
 
 ## Expanding the ESLint configuration
 
