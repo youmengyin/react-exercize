@@ -7,3 +7,4 @@
 [迷你 Calendar](./mini-calendar-test/)
 [Calendar 日历组件](./calendar-component/)
 [快速掌握 storybook](./storybook-test/)
+[Suspense 和 ErrorBoundary](./suspense-error-boundary/)
