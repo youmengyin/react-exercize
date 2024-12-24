@@ -1,5 +1,6 @@
 import MonacoEditor, { EditorProps, loader, OnMount } from "@monaco-editor/react"
 import { editor } from "monaco-editor"
+import { createATA } from "./ata"
 
 
 export interface EditorFile {
@@ -27,6 +28,16 @@ export default function Editor(props: Props) {
     editor.addCommand(monaco.KeyMod.CtrlCmd | monaco.KeyCode.KeyS, () => {
       editor.getAction('editor.action.formatDocument')?.run()
     })
+
+    const ata = createATA((code, path) => {
+      monaco.languages.typescript.typescriptDefaults.addExtraLib(code, `file://${path}`)
+    })
+
+    editor.onDidChangeModelContent(() => {
+      ata(editor.getValue())
+    })
+
+    ata(editor.getValue())
   };
 
   return (
