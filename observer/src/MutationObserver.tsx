@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react"
-import { useDeepCompareEffect, useMutationObserver as useMutObs } from 'ahooks'
+import { useDeepCompareEffect } from 'ahooks'
 const DEFAULT_OPTIONS = {
   attributes: true,
   characterData: true,
@@ -20,7 +20,7 @@ function MutationObserverTest() {
 
   const mutationRef = useRef<HTMLDivElement>(null);
   const [mutationCount, setMutationCount] = useState(0);
-  const incrementMutationCount = (mutationsList) => {
+  const incrementMutationCount = (mutationsList: any) => {
     console.log(123, mutationsList);
     // mutationsList.forEach(() => setMutationCount((c) => c + 1));
     setMutationCount((num) => num + 1);
