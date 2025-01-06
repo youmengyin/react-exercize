@@ -13,3 +13,4 @@
 [playground](./playground-basic/)
 [react playground](./react-playground-project/)
 [5 种 Observer](./observer/)
+[context 的性能缺点和解决方案](./context-trap/)
